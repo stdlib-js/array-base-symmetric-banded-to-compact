@@ -54,6 +54,11 @@ limitations under the License.
 To use in Observable,
 
 ```javascript
+toCompact = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-symmetric-banded-to-compact@umd/browser.js' )
+```
+The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/array-base-symmetric-banded-to-compact/tags). For example,
+
+```javascript
 toCompact = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-symmetric-banded-to-compact@v0.1.0-umd/browser.js' )
 ```
 
@@ -66,7 +71,7 @@ var toCompact = require( 'path/to/vendor/umd/array-base-symmetric-banded-to-comp
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-symmetric-banded-to-compact@v0.1.0-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-symmetric-banded-to-compact@umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -123,7 +128,7 @@ The function accepts the following arguments:
 <!DOCTYPE html>
 <html lang="en">
 <body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-symmetric-banded-to-compact@v0.1.0-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-symmetric-banded-to-compact@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
