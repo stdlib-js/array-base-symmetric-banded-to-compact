@@ -1,0 +1,4 @@
+// Copyright (c) 2026 The Stdlib Authors. License is Apache-2.0: http://www.apache.org/licenses/LICENSE-2.0
+/// <reference types="./index.d.ts" />
+import r from"https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-fast-max@v0.3.0-esm/index.mjs";import e from"https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-fast-min@v0.3.0-esm/index.mjs";import s from"https://cdn.jsdelivr.net/gh/stdlib-js/array-base-zeros2d@v0.2.2-esm/index.mjs";function t(t,i,f,n){var o,m,a,d,p,l,h;if(d=i.length,n){if(o=s([d,f+1]),"upper"===t){for(p=0;p<d;p++)for(m=o[p],a=i[p],l=p;l<e(d,p+f+1);l++)m[l-p]=a[l];return o}for(p=0;p<d;p++)for(m=o[p],a=i[p],h=r(0,f-p),l=r(0,p-f);l<=p;l++)m[h]=a[l],h+=1;return o}if(o=s([f+1,d]),"upper"===t){for(l=0;l<d;l++)for(h=f-l,p=r(0,l-f);p<=l;p++)o[h+p][l]=i[p][l];return o}for(l=0;l<d;l++)for(h=-l,p=l;p<e(d,l+f+1);p++)o[h+p][l]=i[p][l];return o}export{t as default};
+//# sourceMappingURL=index.mjs.map
