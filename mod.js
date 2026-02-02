@@ -1,4 +1,0 @@
-// Copyright (c) 2026 The Stdlib Authors. License is Apache-2.0: http://www.apache.org/licenses/LICENSE-2.0
-/// <reference types="./mod.d.ts" />
-function r(r,n){return r>n?r:n}function n(r,n){return r<n?r:n}function f(r,n){var f,u;for(f=[],u=0;u<n;u++)f.push(r);return f}function u(r){return function(r,n){var u,t,o,e;for(t=n[1],o=n[0],u=[],e=0;e<o;e++)u.push(f(r,t));return u}(0,r)}function t(f,t,o,e){var i,p,c,a,h,s,v;if(a=t.length,e){if(i=u([a,o+1]),"upper"===f){for(h=0;h<a;h++)for(p=i[h],c=t[h],s=h;s<n(a,h+o+1);s++)p[s-h]=c[s];return i}for(h=0;h<a;h++)for(p=i[h],c=t[h],v=r(0,o-h),s=r(0,h-o);s<=h;s++)p[v]=c[s],v+=1;return i}if(i=u([o+1,a]),"upper"===f){for(s=0;s<a;s++)for(v=o-s,h=r(0,s-o);h<=s;h++)i[v+h][s]=t[h][s];return i}for(s=0;s<a;s++)for(v=-s,h=s;h<n(a,s+o+1);h++)i[v+h][s]=t[h][s];return i}export{t as default};
-//# sourceMappingURL=mod.js.map
