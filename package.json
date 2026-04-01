@@ -37,7 +37,7 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/array-base-zeros2d": "^0.2.2",
+    "@stdlib/array-base-zeros2d": "^0.2.3",
     "@stdlib/math-base-special-fast-max": "^0.3.1",
     "@stdlib/math-base-special-fast-min": "^0.3.1",
     "@stdlib/types": "^0.4.3"
