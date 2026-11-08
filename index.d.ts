@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,16 +16,28 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { Collection } from '@stdlib/types/array';
+import { MatrixTriangle } from '@stdlib/types/blas';
 
 /**
-* Convert a two-dimensional symmetric banded nested array to compact banded storage.
+* Two-dimensional nested array.
+*/
+type Array2D<T> = Array<Collection<T>>;
+
+/**
+* Converts a two-dimensional symmetric banded nested array to compact banded storage.
 *
-* @module @stdlib/array-base-symmetric-banded-to-compact
+* @param uplo - specifies whether to reference the upper or lower triangular part of the input array
+* @param arr - input two-dimensional array
+* @param k - number of super-/sub-diagonals
+* @param colexicographic - specifies whether to store diagonals in colexicographic access order
+* @returns output array
 *
 * @example
-* var toCompact = require( '@stdlib/array-base-symmetric-banded-to-compact' );
-*
 * var M = [
 *     [ 11, 2, 0 ],
 *     [ 2, 12, 4 ],
@@ -36,8 +48,6 @@
 * // returns [ [ 0, 2, 4 ], [ 11, 12, 13 ] ]
 *
 * @example
-* var toCompact = require( '@stdlib/array-base-symmetric-banded-to-compact' );
-*
 * var M = [
 *     [ 11, 2, 0 ],
 *     [ 2, 12, 4 ],
@@ -48,8 +58,6 @@
 * // returns [ [ 11, 12, 13 ], [ 2, 4, 0 ] ]
 *
 * @example
-* var toCompact = require( '@stdlib/array-base-symmetric-banded-to-compact' );
-*
 * var M = [
 *     [ 11, 2, 0 ],
 *     [ 2, 12, 4 ],
@@ -60,8 +68,6 @@
 * // returns [ [ 11, 2 ], [ 12, 4 ], [ 13, 0 ] ]
 *
 * @example
-* var toCompact = require( '@stdlib/array-base-symmetric-banded-to-compact' );
-*
 * var M = [
 *     [ 11, 2, 0 ],
 *     [ 2, 12, 4 ],
@@ -71,12 +77,9 @@
 * var out = toCompact( 'lower', M, 1, true );
 * // returns [ [ 0, 11 ], [ 2, 12 ], [ 4, 13 ] ]
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function toCompact<T = unknown>( uplo: MatrixTriangle, arr: Array2D<T>, k: number, colexicographic: boolean ): Array2D<T>;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = toCompact;
